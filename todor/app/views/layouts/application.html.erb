@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todor</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+  
+  <%= yield %>
+
+
+
+
+
+
+</div>
+
+
+<script type="template/handlebars" id="todoItemView">
+  <p>{{ body }}</p>
+</script>
+
+  <%= javascript_include_tag 'application' %>
+</body>
+</html>
