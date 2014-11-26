@@ -1,17 +1,24 @@
-// App.todos = [
-//   { body: 'first time'}
-// ];
+App.todos = [];
 
-_.each(App.todos, function(todo, index){
-  var view = new App.TodoItemView( {model: todo });
-  $('#todoList ul').append(view.render().el);
-})
+App.todos = new App.Collections.Todos();
+
+App.todos.fetch().done(function(){
+  App.todos.each(function(todo, index){
+    var view = new App.Views.TodoItemView({ model: todo });
+    $('#todoList ul').append(view.render().el);
+  });
+}); // ends fetch
+
 
 $('#newTodo button').on('click', function(){
   var todoVal = $('#newTodo input').val();
   $('#newTodo input').val(' ');
-  var todoObject = { body: todoVal};
-  var view = new App.TodoItemView({ model: todoObject });
+  
+  var todo = new App.Models.Todo({ body: todoVal});
+
+  App.todos.create(todo);
+
+  var view = new App.Views.TodoItemView({ model: todo });
   $('#todoList ul').append(view.render().el);
 
-});
+}); // ends on...

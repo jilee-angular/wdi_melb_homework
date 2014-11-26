@@ -4,22 +4,28 @@
   <title>Todor</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
+
+  <!-- Google font -->
+  <link href='http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400,400italic' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+<h1 class="title">Todo App</h1>
+
 <div class="container">
   
   <%= yield %>
 
-
-
-
-
-
 </div>
 
 
-<script type="template/handlebars" id="todoItemView">
-  <p>{{ body }}</p>
+
+
+<script>
+  var App = {};
+  App.Views = {};
+  App.Models = {};
+  App.Collections = {};
 </script>
 
   <%= javascript_include_tag 'application' %>
