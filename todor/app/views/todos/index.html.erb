@@ -1,0 +1,22 @@
+
+  <form class="form-inline">
+    <div class="form-group row">
+      
+      <div id="newTodo" class="col-md-6">
+          <input type="text" class="form-control center">
+          <button class="btn btn-default">go</button>
+      </div>
+
+    </div>  
+  </form>
+    
+  <div id="todoList">
+    <ul></ul>
+  </div>
+
+
+
+
+<script type="template/handlebars" id="todoItemView">
+  <p>{{ body }}<a class="del" href=""><span class="glyphicon glyphicon-trash"></span></a></p>
+</script>
