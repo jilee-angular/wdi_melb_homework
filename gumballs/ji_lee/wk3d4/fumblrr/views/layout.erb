@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+
+  <div id="logo"><a href="/"><img src="https://s3-ap-southeast-2.amazonaws.com/fumblrgafrong/fumblrlogo-orange.png" alt=""></a></div>
+  <nav>
+    <button id="post_btn" class="btn"><a href="/posts/new">New Post</a></button>
+  </nav>
+  
+
+
+  <%= yield %>
+
+
+<footer class="center">Copyright 2014</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>

@@ -1,0 +1,106 @@
+irb(main):001:0> first_ans = 7 / 2
+=> 3
+irb(main):002:0> puts first_ans
+3
+=> nil
+irb(main):003:0>  print first_ans
+3=> nil
+irb(main):004:0> first_ans = 7 / 2.to_f
+=> 3.5
+irb(main):005:0> first_ans = 7.to_f / 2
+=> 3.5
+irb(main):006:0> first_ans = 7 / 2.0
+=> 3.5
+irb(main):007:0> first_ans = 7.0 / 2
+=> 3.5
+irb(main):008:0> first_ans = first_ans.round * 4
+=> 16
+irb(main):009:0>  def get_character(full_string, index)
+irb(main):010:1>  full_string[index]
+irb(main):011:1> end
+=> nil
+irb(main):012:0> message_string = "oicdlcwhejkeenoemrstuo"
+=> "oicdlcwhejkeenoemrstuo"
+irb(main):013:0>  character_1 = get_character(message_string, 4)
+=> "l"
+irb(main):014:0>  character_2 = get_character(message_string, 7)
+=> "h"
+irb(main):015:0> character_3 = get_character(message_string, 2)
+=> "c"
+irb(main):016:0> message_array = [character_1, character_2]
+=> ["l", "h"]
+irb(main):017:0>  message_array.push(character_2)
+=> ["l", "h", "h"]
+irb(main):018:0> message_array.pop()
+=> "h"
+irb(main):019:0> message_array.push(character_3)
+=> ["l", "h", "c"]
+irb(main):020:0> message_array
+=> ["l", "h", "c"]
+irb(main):021:0> puts message_array
+l
+h
+c
+=> nil
+irb(main):022:0> print message_array
+["l", "h", "c"]=> nil
+irb(main):023:0> value_float_1 = Math.sin(Math::PI / 2)
+=> 1.0
+irb(main):024:0> value_float_2 = Math.cos(Math::PI)
+=> -1.0
+irb(main):025:0> value_float_3 = (value_float_1 + value_float_2)
+=> 0.0
+
+
+
+irb(main):026:0>  
+irb(main):026:0>  value_integer_1 = (value_float_1 + value_float_2).to_i
+=> 0
+irb(main):027:0> value_float_1 = value_float_1 * 4
+=> 4.0
+irb(main):028:0>  value_float_2 *= 5
+=> -5.0
+irb(main):029:0> value_float_2 = value_float_2.abs
+=> 5.0
+irb(main):030:0> value_integer_1 += 8
+=> 8
+irb(main):031:0> value_float_4 = value_integer_1 * 3
+=> 24
+irb(main):032:0> value_float_3 -= 1
+=> -1.0
+irb(main):033:0> number_array = [value_float_1, value_float_2, value_float_3, value_float_4]
+=> [4.0, 5.0, -1.0, 24]
+irb(main):034:0> number_array = [value_float_1, value_float_2, value_float_3, value_float_4]
+=> [4.0, 5.0, -1.0, 24]
+irb(main):035:0> number_array.push(first_ans)
+=> [4.0, 5.0, -1.0, 24, 16]
+irb(main):036:0> number_array.unshift(value_integer_1)
+=> [8, 4.0, 5.0, -1.0, 24, 16]
+irb(main):037:0>  
+irb(main):038:0* number_array.push(value_integer_1)
+=> [8, 4.0, 5.0, -1.0, 24, 16, 8]
+irb(main):039:0> number_array.unshift( Math.sqrt(36) )
+=> [6.0, 8, 4.0, 5.0, -1.0, 24, 16, 8]
+irb(main):040:0> number_array.delete_at(5)
+=> 24
+irb(main):041:0> number_array.push( [19, 21, 6, 3, 1] )
+=> [6.0, 8, 4.0, 5.0, -1.0, 16, 8, [19, 21, 6, 3, 1]]
+irb(main):042:0> number_array.flatten!
+=> [6.0, 8, 4.0, 5.0, -1.0, 16, 8, 19, 21, 6, 3, 1]
+irb(main):043:0> number_array.each { |current_index| puts get_character(message_string, current_index) }
+w
+e
+l
+c
+o
+m
+e
+t
+o
+w
+d
+i
+=> [6.0, 8, 4.0, 5.0, -1.0, 16, 8, 19, 21, 6, 3, 1]
+
+
+

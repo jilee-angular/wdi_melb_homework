@@ -1,0 +1,18 @@
+<header class="center">
+  <h1>MemeVideo</h1>
+</header>
+<div class="container">
+
+    <a href="/videos/new"><button class="btn btn-lg btn-primary">ADD VIDEO</button></a>
+
+  <% @rows.each do |row| %>
+    
+    <div class="youtube">
+      <p><a href="/videos/<%= row['id'] %>"><%= row['title'] %></a></p>
+    </div> 
+
+ 
+
+  <% end %>
+
+</div>

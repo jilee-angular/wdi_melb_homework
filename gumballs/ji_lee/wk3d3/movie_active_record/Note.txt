@@ -1,0 +1,31 @@
+when searched for the first time store omdb data into local DB
+
+on next search, check to see if local DB matches search
+
+if search match local DB put search
+
+else search omdb DB
+
+ALTER TABLE movies ALTER COLUMN GENRE TYPE VARCHAR(100);
+
+d SERIAL8 PRIMARY KEY,
+Title VARCHAR(150),
+Year VARCHAR(6),
+Rated VARCHAR(6),
+Released VARCHAR(20),
+Runtime VARCHAR(10),
+Genre VARCHAR(20),
+Director VARCHAR(40),
+Writer VARCHAR(20),
+Actors VARCHAR(200),
+Plot VARCHAR(300),
+Language VARCHAR(20),
+Country VARCHAR(20),
+Awards VARCHAR(100),
+Poster VARCHAR(300),
+Metascore VARCHAR(100),
+imdbRating VARCHAR(10),
+imdbVotes VARCHAR(20),
+imdbID VARCHAR(20),
+Type VARCHAR(20),
+Response VARCHAR(10)

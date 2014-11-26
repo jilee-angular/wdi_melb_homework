@@ -1,0 +1,80 @@
+// if ($('.showing').eq(0).text() === $('.showing').eq(1).text()){
+
+
+for(var i=0; i<cards.length; i++){
+  // create a new card
+  var $card = $('<div>')
+    .attr('class', 'card')
+    .attr('data-card-value', cards[i])
+    .html('?');
+    // .append('<div>')
+    // //           .attr('class', 'card-container')
+    //           .attr('class', 'flipper')
+    //           .attr('class', 'front')
+    //           .attr('class', 'back')
+    //           .attr('class', 'number')
+    //           .html('')
+
+  // append to the game div
+  $('#game').append($card);
+}
+
+$('.card').on('click', function(){
+  console.log($(this).data('card-value'));
+  // $(this).html( $(this).attr('data-card-value') );
+});
+
+
+for(var i=0; i< cards.length; i++ ) {
+
+  // create a new card
+  var $card = $('<div>')
+    .attr('class', 'card')
+    .attr('data-card-value', cards[i])
+    .html('?');
+
+  // append to the game div
+  $('#game').append($card);
+}
+
+
+$('.card').on('click', function() {
+  $(this).html( $(this).attr('data-card-value') );
+});
+
+
+$('.card').on('click', function() {
+  // hide the front, show the back
+  console.log(this);
+
+  var $cardYouClickedOn = $(this);
+  var $cardValue = $cardYouClickedOn.attr('data-card-value');
+  $cardYouClickedOn.html($cardValue);
+
+  setTimeout(function(){
+    $cardYouClickedOn.html('?').css('transform', 'rotateY(20deg)');
+  }, 2000);
+  // $(this).html( $(this).attr('data-card-value') );
+});
+
+
+  // if ($('.showing')[0] !== undefined && $('.showing')[1] !== undefined ){
+    //   if ($('.showing')[0] == $('.showing')[1]){
+      
+      // alert($(this).html());
+    //   }
+    // };
+    // $(this).html( $(this).attr('data-card-value') );
+
+    // $card.find('.back').html()
+
+  // $(this).html( $(this).attr('data-card-value') );
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+<h1>Todor</h1>
+
+<%= form_for Task.new, :remote => true do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description%>
+  <%= f.submit %>
+<% end %>
+
+<ul id="tasks">
+</ul>
+
+<script>
+
+  // deals with the HTML
+  var appendTask = function(task) {
+
+    var $li = $('<li>')
+      .attr('data-id',task.id)
+      .html(task.description);
+
+    if (task.completed) {
+      $li.addClass('completed');
+    }
+
+    $('#tasks').append($li);
+  };
+
+  // grabs the json data and and calls the append function
+  var fetchTask = function() {
+
+    $.ajax({
+      url: '/tasks.json',
+      dataType: 'json'
+    }).done(function(data) {
+      $(data).each(function(index, task) {
+        appendTask(task);
+      })
+    });
+  }; // end fetchTask
+
+  // clears the text box if the ajax submission is successful
+  $('#new_task').on('ajax:success', function(evt, task) {
+    $('#task_description').val('');
+    appendTask(task);
+  });
+
+  // sends the complete updates to the server and updates classes
+  $('#tasks').on('click', 'li', function() {
+    var $li = $(this);
+
+    if ($li.hasClass('completed')) {
+      $.ajax({
+        type: "POST",
+        url: '/tasks/' + $li.attr('data-id') + '/uncomplete'
+        }).done(function() {
+        $li.toggleClass('uncomplete');
+      });
+
+    } else {
+
+      $.ajax({
+        type: "GET",
+        url: '/tasks/' + $li.attr('data-id') + '/complete'
+        }).done(function() {
+        $li.toggleClass('completed');
+      });
+    }
+  });
+
+  fetchTask();
+
+  </script>
+
+<!-- 
+  // var fetchTask = function() {
+
+  //   $('#tasks').empty(); // clears the ul
+ 
+  //   $.ajax({
+  //     url: '/tasks.json',
+  //     dataType: 'json', 
+  //     type: 'GET'
+  //   }).done(function(data){
+
+  //     $(data).each(function(index, task){
+  //       var task = $('<li>').html(task.description);
+  //       $('#tasks').append(task);
+      
+  //     })
+  //   });
+  // }; // end fetchTask
+  
+  // $('#new_task').on('ajax:success', function(){
+  //   $('#task_description').val('');
+  //   fetchTask();
+  // });
+
+  // fetchTask();
+
+
+  // $todoListElem = $('#tasks')
+
+  // $todoListElem.on('click', 'li', function(){
+  //   $(this).toggleClass('completed');
+  // });
+  // // $('#new_task').on('submit', function(event){
+  // //   console.log('leave it to me!!!')
+  // //   event.preventDefault();  // stop!!!
+
+  // //   var formData = new FormData();
+  // //   formData.append('description', $('#task_description').val());
+
+  // //   $.ajax({
+  // //     url: '/tasks',
+  // //     // dataType: 'json',
+  // //     type: 'POST',
+  // //     processData: false,
+  // //     contentType: false,
+  // //     data: formData,
+  // //   }).done(function(data) {
+  // //     console.log(data);
+
+  // //     var task = $('<li>').html(data.description);
+  // //     $('#tasks').append(task);
+
+  // //   }).fail(function() {
+  // //     console.log('you fail');
+  // //   });
+  // // }); -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

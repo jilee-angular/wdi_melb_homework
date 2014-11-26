@@ -1,0 +1,13 @@
+<!-- Genre heading.. -->
+
+  <h3><%= "#{@rows.first['genre']}" %></h3>
+
+
+<!-- Lists individual videos -->
+  <% @rows.each do |row| %>
+    <%= row['title']%>
+    <iframe width="450" height="315" src="<%= row['video_url'] %>" frameborder="0" allowfullscreen></iframe>
+    <p><%= row['description'] %></p>
+  <% end %>
+
+<a href="/"><button class="btn btn-default">Home</button></a>  

@@ -1,0 +1,95 @@
+<div class="container center">
+  <h1>MTA</h1>
+  <h3>NYC subway destination check </h3>
+
+<section class="center row">
+  <form action="/cloud" method="get" class="form_horizontal" role="form">
+  
+    <div class="form-group inputs">
+      <div class="input-group">
+        <label for="start_ln"></label>
+        <select name="start_ln" id="start_ln" class="form-control">
+          <option value="">entry line</option>
+          <option value="n">N Line</option>
+          <option value="l">L Line</option>
+          <option value="s">6 Line</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group inputs">
+      <div class="input-group">
+        <label for="start_st"></label>
+        <select name="start_st" id="start_st" class="form-control">
+          <option value="">entry station</option>
+          <option value="ts">Time Square (N line)</option>
+          <option value="34th">34th (N Line)</option>
+          <option value="28th">28th (N Line)</option>
+          <option value="23th">23rd (N Line)</option>
+          <option value="us">Union Square (N Line)</option>
+          <option value="8th">8th (N Line)</option>
+          <option value="">- - - - -</option>
+          <option value="8th">8th (L Line)</option>
+          <option value="6th">6th (L Line)</option>
+          <option value="us">Union Square (L Line)</option>
+          <option value="3rd">3rd (L Line)</option>
+          <option value="1st">1st (L Line)</option>
+          <option value="">- - - - -</option>
+          <option value="gc">Grand Central (6 Line)</option>
+          <option value="33rd">33rd (6 Line)</option>
+          <option value="28th">28th (6 Line)</option>
+          <option value="23rd">23rd (6 Line)</option>
+          <option value="us">Union Square (6 Line)</option>
+          <option value="ap">Astor Place (6 Line)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group inputs"> 
+      <div class="input-group">
+        <label for="exit_ln"></label>
+        <select name="exit_ln" id="exit_ln" class="form-control">
+          <option value="">exit line</option>
+          <option value="n">N Line</option>
+          <option value="l">L Line</option>
+          <option value="s">6 Line</option>
+        </select>
+      </div>
+    </div> 
+
+    <div class="form-group inputs">
+      <div class="input-group">
+        <label for="exit_st"></label>
+        <select name="exit_st" id="exit_st" class="form-control">
+          <option value="">exit station</option>
+          <option value="ts">Time Square (N line)</option>
+          <option value="34th">34th (N Line)</option>
+          <option value="28th">28th (N Line)</option>
+          <option value="23rd">23rd (N Line)</option>
+          <option value="us">Union Square (N Line)</option>
+          <option value="8th">8th (N Line)</option>
+          <option value="">- - - - -</option>
+          <option value="8th">8th (L Line)</option>
+          <option value="6th">6th (L Line)</option>
+          <option value="us">Union Square (L Line)</option>
+          <option value="3rd">3rd (L Line)</option>
+          <option value="1st">1st (L Line)</option>
+          <option value="">- - - - -</option>
+          <option value="gc">Grand Central (6 Line)</option>
+          <option value="33rd">33rd (6 Line)</option>
+          <option value="28th">28th (6 Line)</option>
+          <option value="23rd">23rd (6 Line)</option>
+          <option value="us">Union Square (6 Line)</option>
+          <option value="ap">Astor Place (6 Line)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="next">
+      <button class="btn btn-lg btn-primary btn-main">GO</button>
+    </div>
+
+  </form>
+
+</section>
+</div>

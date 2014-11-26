@@ -1,0 +1,91 @@
+var $addTaskBtn = $('#add-task');
+var $todoListElem = $('#todo-list');
+
+$addTaskBtn.on('click', function(){
+
+  var $newTaskBody = $('#new-task-body');
+  var $listItemElem = $('<li>').html($newTaskBody.val());
+  $todoListElem.append($listItemElem); //append appendTo
+  
+  $newTaskBody.val('');
+})
+
+  $todoListElem.on('click', 'li', function(){
+    $(this).toggleClass('completed');
+  });
+
+
+$enterLetter.on('click', function(){
+  var $letterField = $('#letterField');
+  var $listItemElem = $('<span>').html($letterField.val()+ "  ");
+  $guessedLetters.append($listItemElem);
+  $letterField.val('');
+  player.guessedLetters();
+  word.checkLetters();
+})
+
+
+ $letterField = $('#letterField');
+  var $listItemElem = $('<span>').html($letterField.val()+ "  ");
+  $guessedLetters.append($listItemElem);
+  $letterField.val('');
+
+  $('#guessesLeft').html(function(i, value) { return + value - 1});
+
+
+  _.find(letters, function(ltr){
+      if (ltr === $letterField) {
+        console.log(ltr);
+      }
+    });
+
+
+  // $answerBox = $('#answerBox');
+  //   if ($('#answerTry').val() == word.secretWord) {
+  //     conclude = $('<p>').html("Winner!");
+  //     $answerBox.append(conclude);
+  //   } else if(counter < 2) {
+  //     conclude = $('<p>').html("Try again");
+  //     counter += 1;
+  //   } else if(counter >= 2) {
+  //     conclude = $('<p>').html("The correct answer is: " + word.secretWord);
+  //     alert("Game Over");
+  //     window.location.reload();
+  //   }
+
+
+  // checkWin: function() {
+    
+  //   $answerBox = $('#answerBox');
+  //   if ($('#answerTry').val() == word.secretWord) {
+  //     conclude = $('<p>').html("Winner!");
+  //     $answerBox.append(conclude);
+  //   } else if(counter < 2) {
+  //     conclude = $('<p>').html("Try again");
+  //     counter += 1;
+  //   } else if(counter >= 2) {
+  //     conclude = $('<p>').html("The correct answer is: " + word.secretWord);
+  //     alert("Game Over");
+  //     window.location.reload();
+  //   }
+    
+  // },
+}
+
+// game object
+// var game = {
+//   resetGame: function() {
+//   },
+//   giveUp: function() {
+//   },
+//   updateDisplay: function() {
+//   }
+// }
+
+
+
+
+
+
+
+  

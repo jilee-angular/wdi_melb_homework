@@ -1,0 +1,22 @@
+<div class="margintop"></div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <img src="<%= @post.image_url %>" alt="...">
+      </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-12">
+        <div class="caption">
+          <h3><%= @post.title %></h3>
+          <p><%= @post.content %></p>
+          <p><%= @post.created_at %></p>
+          <p><a href="/posts/<%= @post.id %>/edit" class="btn btn-primary" role="button">Edit</a> <a href="/" class="btn btn-default" role="button">Home</a></p>
+        </div>
+    </div>
+  </div> 
+
+</div>

@@ -1,0 +1,26 @@
+<!-- Add new video button -->
+<div class="addvideo">
+  <a href="/videos/new"><button class="btn btn-lg btn-primary">ADD VIDEO</button></a>
+</div>
+
+
+<div class="container">
+
+  <div id="genre">
+    <a href="/">All</a>
+      <% @genres.each do |row| %>
+        <a href="/genre/<%= row['genre'] %>"><%= row['genre'] %></a>
+      <% end %>
+
+  </div>
+<!-- Single video contents -->
+<div class="single">
+  <% @rows.each do |row| %>    
+    <div class="youtube">
+      <p><a href="/videos/<%= row['id'] %>"><%= row['title'] %></a></p>
+    </div>     
+    <iframe width="350" height="250" src="<%= row['video_url'] %>" frameborder="0" allowfullscreen></iframe>
+  <% end %>
+</div>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="show_container">
+  <h2>Show Video Details</h2>
+
+  <% @rows.each do |row| %>
+    <p><%= row['title'] %></p>
+    
+    <iframe width="450" height="315" src="<%= row['video_url'] %>" frameborder="0" allowfullscreen></iframe>
+
+    <p><%= row['description'] %></p>
+    <p><%= row['genre'] %></p>
+    
+    
+    <a href="/videos/<%= row['id'] %>/edit"><button class="btn btn-primary">Edit</button></a>
+    
+    <form action="/video/<%= row['id'] %>/delete" method="post">
+      <button class="btn btn-danger">Delete</button>
+    </form>
+
+  <% end %>
+  
+    <a href="/"><button class="btn btn-default">Home</button></a>
+   
+</div>

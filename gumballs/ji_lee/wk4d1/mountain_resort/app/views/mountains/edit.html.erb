@@ -1,0 +1,22 @@
+<h2>Edit</h2>
+
+<%= form_for @mountain do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </p>
+  <p>
+    <%= f.label :location %>
+    <%= f.text_area :location %>
+  </p>
+  <p>
+    <%= f.label :details %>
+    <%= f.text_area :details %>
+  </p>
+  <button>Go</button>
+
+<% end %>

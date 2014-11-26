@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>BOOKS</h1>
+
+  <div class="book_holder">
+    <% @books.each do |book| %>
+      <p><h3><%= link_to book.title, book_path(book.title) %></h3></p>
+      <p><%= link_to (image_tag(book.image_url)), book_path(book.title)  %></p>
+      <%= link_to 'delete', book, :method => :delete, :data => { :confirm => 'are you sure?' }, class: "btn btn-default" %>
+    <!--   <p><%= link_to 'show', book_path(book.title) %></p> -->
+      <%= link_to 'edit', edit_book_path(book.id), class: "btn btn-default" %> <br>
+    <% end %>
+  </div>
+</div>

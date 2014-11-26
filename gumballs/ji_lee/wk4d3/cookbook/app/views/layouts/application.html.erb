@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookbook</title>
+  <!-- Latest compiled and minified CSS -->
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+    <div class="logo">  
+      <a href="/"><img src="http://i.imgur.com/9I6H26a.png"></a>
+    </div>
+
+    <nav> 
+      <ul>
+        <li><%= link_to "Home", root_path  %></li>
+        <li><%= link_to "Books", books_path %></li>
+        <li><%= link_to "Recipes", recipes_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to 'logout', logout_path, :method => :delete, :data => { :confirm => 'are you sure?' } %></li>
+        <% else %>
+          <li><%= link_to 'login', login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+<div class="container">
+  <!-- Error message from Boostrap starts-->
+    <% flash.each do |key, value| %>
+      <div class="alert alert-info" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <%= value %>
+      </div>
+    <% end %>
+  <!-- Error message from Boostrap ends-->
+
+  <%= yield %>
+</div>
+
+  <footer>Copyright 2014</footer>
+    <!-- Latest compiled and minified JavaScript -->
+  
+</body>
+</html>

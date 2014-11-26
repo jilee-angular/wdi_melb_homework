@@ -1,0 +1,13 @@
+<div class="container center">
+  <h1>click a title</h1>
+  
+  <% @output.each do |movie| %>     
+    <p><a href="/detail/<%= movie["Title"] %>">
+        <%= movie["Title"] %></a></p>
+  <% end %> 
+
+  <a href="/"><button class="btn btn-primary">Home</button></a>
+</div>
+
+
+

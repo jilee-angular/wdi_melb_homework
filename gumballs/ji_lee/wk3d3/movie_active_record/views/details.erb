@@ -1,0 +1,20 @@
+<div class="container">
+  <h1><%= @movies.title %></h1>
+  
+  <div class="poster horizontal">
+    <img src="<%= @movies.poster %>" alt="poster"> 
+
+  </div> 
+
+
+  <div class="movie_details horizontal">
+    <p>Year: <%= @movies.year %></p>
+
+    <p>Genre: <%= @movies.genre %></p>
+    <p>Director: <%= @movies.director %></p>
+  </div>
+
+ <a href="/"><button class="btn btn-lg btn-primary">Home</button></a>
+
+</div>
+

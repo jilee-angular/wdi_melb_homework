@@ -1,0 +1,56 @@
+<div class="container form-horizontal">
+  <%= form_for @recipe do |f| %>
+  
+    <div class="form-group">
+        <%= f.label :name, class: "col-sm-2 control-label" %>
+      <div class="col-sm-8">
+        <%= f.text_field :name, class: "form-control" %>
+      </div>  
+    </div>
+    <div class="form-group">
+        <%= f.label :meal_type, class: "col-sm-2 control-label"  %>
+      <div class="col-sm-8">
+        <%= f.text_field :meal_type, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+        <%= f.label :cooktime, class: "col-sm-2 control-label"  %>
+      <div class="col-sm-8">
+        <%= f.text_field :cooktime, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :ingredients, class: "col-sm-2 control-label" %>
+      <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
+      <%#= f.text_field :ingredient_ids %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :servingsize, class: "col-sm-2 control-label"  %>
+      <div class="col-sm-8">
+        <%= f.text_field :servingsize, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+        <%= f.label :instructions, class: "col-sm-2 control-label"  %>
+      <div class="col-sm-8">
+        <%= f.text_field :instructions, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+        <%= f.label :image_url, class: "col-sm-2 control-label"  %>
+      <div class="col-sm-8">
+        <%= f.text_field :image_url, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :book_id, class: "col-sm-2 control-label"  %>
+      <div class="dropdown">  
+        <%= f.collection_select :book_id, @books, :id, :title, class: "form-control"  %>
+      </div>  
+    </div>
+    <button class="btn btn-lg btn-primary">Submit</button>
+
+  <% end %>
+</div>

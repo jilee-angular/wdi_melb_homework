@@ -1,0 +1,73 @@
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+body {
+  background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCACxARwDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAECAwUH/8QAKhABAQEBAAEBBgQHAAAAAAAAAAERAgMSBAUGITHSFBZBcjIzUXODkaL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDyKLiIuNIqKiYYKi4iLgioqJi+QVyuJioDTlpyy5axRcXERUBpFRnFxUXKeolPQO0qNICpelabQRWfS+qz6RU2o6p1FBNRVVNQLU9GdBlWfTXqIsBlUVrYiis6ldSAiomKgLhxMVAVFxEXBFxcRFwFRcTFwFctIzi5VFxURKqUFxURKcBcp6jT1UXAjRoKtTaV6RehRajqi1FqAqKdqbQTU1VqagQBUBWdO1HVBPTOqtRRU2pVSAHBioAioIcBUVCioIrlpIjlcBcii5+h4oqKiIuAcXKg5QXpyoPQXo1GjQXpepNqbQVek2lam0DtTaVqbQO1Olam1BVqaVpaAtK0Wp0CqKqooJqaqpFTSVSAzhHAVFRMVBFRUTFQF8tIzi4DSKiJVyqKkUmHoGNTo0F6NRp6B6NTo0FaVqbRoC1Oi1NoHam0WptQFpWlaVoC0rS0rQGjStToKqKNK0E0C0tFBDQBnCOAcXEQ5RFqiYqAuKlRKqAuVcrKVcoNZRanS1Q9PUWiUF6NTo0FaNTaWgu0tTpaB2ptFqbUDtTStK0BSpaVoC0rStTaB2laVqbRT0rS0tA7SLQB6NIgWcIAo4nTBcq9ZSq0Rcq5WO/NpL8gXKuVlKuA10k6NA6NLRAPRpWloK0tTaWgu0rUaVoKtK1OloHaWlpUDtK0rU2gdpWlaWiilQQAhSAGRgCMAY0gBnE6coL0anT0DlXzWapQayrlZSn6hGulqZ0L0DSU2fNVoHanStK0D0anSvQK0rU6WgrStTpaC5SqdGgdTadTRRSFIAKCAEZAAAAMgBgACGikCtEpAF6NSYLlPWeqlBWnqQDSdH6meiUGmlanRoh2lotTRT0aRaB0tK0gPRqdGgrRqdGgZAgMyGgACAAAAAYAyMCpHgwCB4eAUMAAIABjQQHo0iBenKz09BelanS0Fam0tADRpADLQAAAAwQAwAAAAAAAAACwYAsGGALBisAJwYrCBIUJASDsICBkAAAAjAEAAEPCGgVAoAAAAAQGZADBADAAAAA0hkNAwWjQMFpgBQVoGIWjQFKnpUCIyAAAACAGQ0aAIAACCAAAAAADhC30y2/SAdDrc/DPvrrmX8Fmzc68vEv+vUf5X99T6+xyf5vH9wOQHW/LXvjc/C87/f8AH9wnwz74s2eyc2X9Z5/H9wOVKNdafDPvmyWeyc2X5yzzeP5/9K5+FffnU3n2H1T+s83H3KOUAAAAAGAAIAAAABAAQAAgAAIAAAABAAAAgAAAAABPl/ld/toAPbvH/Bz+2K5+lAA/1IAAYAP/2Q==);
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  background-color: orange;
+  color: #b5afaf;
+  font-size: 1.5em;
+}
+.container {
+  margin-top: 90px;
+  list-style: none;
+}
+h1 {
+  color: #fcf9f9;
+  font-size: 5.8em;
+  margin-bottom: 0.5em;
+  font-family: 'Lato', sans-serif;
+}
+header {
+  margin: 4em;
+}
+footer {
+  min-height: 100px;
+  margin-top: 100px;
+  margin-right: 100px;
+}
+
+.moviego {
+  max-width: 300px;
+ }
+.horizontal {
+  display: inline-block;
+  margin: 1em;
+  width: 300px;
+}
+.horizontal_dif {
+  display: inline-block;
+  margin-left: -3em;
+  width: 200px;
+}
+.movie_details {
+  display: inline-block;
+  min-width: 300px;
+  text-align: left;
+}
+.poster {
+  display: inline-block;
+  max-width: 300px;
+  vertical-align: top;
+}
+.bottom {
+    bottom: 0;
+    height: 30px; /* forces #testmenu to the bottom */
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+}
+.movielist {
+  color: orange;
+}

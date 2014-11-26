@@ -1,0 +1,53 @@
+body {
+  background-color: #fff;
+  margin: 0;
+
+}
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+nav {
+  font-size: 1.2em;
+  text-align: right;
+  margin-right: 3em;
+  margin-top: -5em;
+  margin-bottom: 7em;
+}
+nav li {
+  padding-right: 1.5em;
+}
+a {
+  color: #A5B83D;
+}
+footer {
+  height: 10em;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  margin-top: 12em;
+  padding-top: 2em;
+}
+.center {
+  text-align: center;
+}
+.container {
+  text-align: center;
+  margin: 0 auto;
+}
+.logo{
+  margin: 0 0 3em;
+
+  background-color: #f7f7f7;
+}
+.books {
+  display: inline-block;
+}
+.recipes {
+  display: inline-block;
+}
+.book_holder {
+  display: inline-block;
+  margin-bottom: 5em;
+}
+

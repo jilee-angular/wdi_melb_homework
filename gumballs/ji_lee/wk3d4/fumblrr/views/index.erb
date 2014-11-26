@@ -1,0 +1,22 @@
+<div class="margintop"></div>
+  <div class="row">
+    <div class="main-wrapper">
+
+        <% @posts.each do |post| %>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <a href="/posts/<%= post.id %>">
+              <img src="<%= post.image_url %>" alt="..."></a>
+   <!--            <div class="caption">
+                <h4><%= post.title %></h4> -->
+
+<!-- 
+                <p><a href="/posts/<%= post.id %>" class="btn btn-default" role="button">More</a></p> -->
+             <!--  </div> -->
+            </div>
+          </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

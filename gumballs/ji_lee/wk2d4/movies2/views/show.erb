@@ -1,0 +1,16 @@
+<div class="container center movielist">
+
+    
+
+
+<% @output.each do |movie| %>     
+<p><a href="/detail/<%= movie["Title"] %>">
+       <%= movie["Title"] %></a></p>
+ 
+    <% end %> 
+
+
+</div>
+
+
+
